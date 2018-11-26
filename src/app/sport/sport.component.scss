@@ -1,0 +1,65 @@
+.wrapp{
+    background-color: #343F4B ;
+}
+
+.head{
+    display:flex;
+    padding-bottom: 2em;
+}
+
+.titre{
+    color: white;
+    background-color: red;
+    width: 60vw;
+    height: 20vh;
+    text-align: right;
+    padding-top: 13vh;
+}
+
+.connexion{
+    color:white;
+    width: 40vw;
+    height: 20vh;
+    padding-top: 5vh;
+    padding-left: 3vw;
+    border:red solid
+}
+
+h1{
+    text-align: center;
+    color:white;
+}
+
+h6{
+    text-align: left;
+}
+
+img {
+    width : 11em;
+    height : 11em;
+}
+
+.sports{
+    margin : 2em 0em 2em 1em;
+    order: black solid;
+}
+
+.alignementsport{
+    display: flex;
+    padding-top :0em;
+   /* border: blue solid; */
+}
+
+.infosport{
+    padding-left: 0.5em;
+    padding-top: 4em;
+    color: white;
+   /* border: red solid; */
+    font-family: Arial, Helvetica, serif;
+}
+
+.recherche{
+    padding-top: 2em;
+}
+
+

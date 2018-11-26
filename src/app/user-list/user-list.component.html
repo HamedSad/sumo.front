@@ -1,0 +1,16 @@
+<p>
+  user-list works!{{userList}}
+</p>
+
+<h1>Liste des utilisateurs</h1>
+
+<li *ngFor = "let user of userList">
+
+  Utilisateur numero : {{user.idUser}}<br>
+    Nom : {{user.nomUser}}
+    <br>
+    Prénom : {{user.prenomUser}}
+      <br>
+   Email :  {{user.emailUser}}
+  <hr>
+  </li>

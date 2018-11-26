@@ -1,0 +1,37 @@
+<div class="wrapp">
+
+  <div class="head">
+    <div class="titre">
+      <h1>#SUMO</h1>
+    </div>
+
+    <!-- Partie connexion avec le bouton se connecter -->
+    <div class="connexion">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Déconnexion</button><br><br>
+      <br><a routerLink="/sport">Accueil</a>
+    </div>
+  </div>
+
+  <h1>Tous les sports</h1>
+
+  <form action="" class="recherche">
+    <input class="searchbar" type="text" value="Rechercher un sport" />
+    <input class="bouton" type="button" type="submit">
+  </form>
+
+  <div class="sports">
+    <h6 *ngFor="let sport of sportList">
+      <div class="alignementsport">
+        <div class="casesport">
+            <a routerLink="/sport/:id"><img src="{{sport.urlImageSport}}"/></a> 
+        </div>
+        <div class="infosport">
+          {{sport.nomSport}}<br>
+          {{sport.saisonSport}}<br>
+          {{sport.descriptionSport}}<br>
+          {{sport.idSport}} 
+        </div>
+      </div>
+    </h6>
+  </div>
+</div>
