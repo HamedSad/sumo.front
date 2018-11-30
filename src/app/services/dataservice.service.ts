@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { User } from '../model/user';
 import { Sport } from '../model/sport';
 
@@ -11,12 +11,14 @@ import { Sport } from '../model/sport';
 })
 export class DataserviceService {
 
+  SportList : Sport[];
+
   constructor(private httpClient: HttpClient) { }
 
 
-  public getSportById(idSport) : Observable <Sport[]>{
-    return this.httpClient.get<Sport[]>('http://localhost:8080/api/sport/'+idSport);
-    }
+  public getSportById(idSport : number) : Observable <Sport[]>{
+  return this.httpClient.get<Sport[]>('http://localhost:8080/api/sport/'+idSport);
+  }
 
   public findUsers(): Observable <User[]>{
     return this.httpClient.get<User[]>('http://localhost:8080/api/user/all');

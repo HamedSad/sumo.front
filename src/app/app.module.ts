@@ -13,14 +13,17 @@ import { EquipementComponent } from './equipement/equipement.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './services/auth.service';
 import { SingleSportComponent } from './single-sport/single-sport.component';
+import { HeadComponent } from './head/head.component';
+import { CommentaireComponent } from './commentaire/commentaire.component';
 
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
   { path : 'sport', component : SportComponent},
+  //le fragment id de l'url pourra etre exploité
   { path : 'sport/:id', component : SingleSportComponent},
   { path : 'user', component : UserListComponent},
-  //{ path : 'accueil', component : AccueilComponent},
+  { path : 'accueil', component : AccueilComponent},
   { path : 'auth', component : AuthComponent}
 ];
 
@@ -33,7 +36,9 @@ const appRoutes: Routes = [
     AccueilComponent,
     EquipementComponent,
     AuthComponent,
-    SingleSportComponent
+    SingleSportComponent,
+    HeadComponent,
+    CommentaireComponent
   ],
   imports: [
     BrowserModule,

@@ -1,30 +1,48 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, NgModule, Input } from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Sport } from '../model/sport';
+import { SportComponent } from '../sport/sport.component';
+
 
 
 @Component({
   selector: 'app-single-sport',
   templateUrl: './single-sport.component.html',
-  styleUrls: ['./single-sport.component.scss']
+  styleUrls: ['./single-sport.component.scss'],
+ 
 })
-export class SingleSportComponent {
+
+@NgModule({
+  declarations: [SportComponent]
+})
+export class SingleSportComponent implements OnInit {
 
   //Noms arbitraires donnés à règlesSport et nomSport  
-   reglesSport : string = 'Regle';
-   nomSport : string = 'Nom';
-   idSport : BigInteger;
+  //reglesSport : string = 'Regle';
+  //nomSport : String = 'Nom';
+  //saisonSport : string ;
+  //idSport : number;
+  //sportList: Sport[];
+
+  sport: Sport;
+   
 
   //pour récuperer le fragment id on injecte ActivatedRoute dans lequel il y aura toutes les infos de la route active et de ce fragment
   constructor(private dataService: DataserviceService, 
-            private route: ActivatedRoute) { }
- 
+            private route: ActivatedRoute) {
+              }
 
   ngOnInit() {
-   this.route.snapshot.params['id'];
-  // this.nomSport = this.dataService.getSportById(this.idSport);
-   //this.reglesSport = this.dataService.getSportById(this.idSport);
+  this.getOneSport();
   }
+
+getOneSport() {
+  const idSport = +this.route.snapshot.paramMap.get("id");
+   
+  this.dataService.getSportById(idSport).subscribe(sport => this.sport=sport);
+   //this.dataService.getSportById(this.nomSport).subscribe( sport => this.sportList = sport);
+      //this.nomSport =this.route.snapshot.params['id'];
+}
 
 }

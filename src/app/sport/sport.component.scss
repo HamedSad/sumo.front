@@ -2,32 +2,18 @@
     background-color: #343F4B ;
 }
 
-.head{
-    display:flex;
-    padding-bottom: 2em;
-}
-
-.titre{
-    color: white;
-    background-color: red;
-    width: 60vw;
-    height: 20vh;
-    text-align: right;
-    padding-top: 13vh;
-}
-
-.connexion{
+a{
+    text-decoration: none;
     color:white;
-    width: 40vw;
-    height: 20vh;
-    padding-top: 5vh;
-    padding-left: 3vw;
-    border:red solid
+    font-family: Arial, Helvetica, serif;
+    
 }
+
 
 h1{
     text-align: center;
     color:white;
+   
 }
 
 h6{
@@ -35,13 +21,19 @@ h6{
 }
 
 img {
-    width : 11em;
-    height : 11em;
+    width : 10em;
+    height : 10em;
 }
+
+@media screen and (min-width: 700px) {
+    img {
+        width : 15em;
+        height : 15em;
+    }
+  }
 
 .sports{
     margin : 2em 0em 2em 1em;
-    order: black solid;
 }
 
 .alignementsport{
@@ -58,8 +50,10 @@ img {
     font-family: Arial, Helvetica, serif;
 }
 
-.recherche{
-    padding-top: 2em;
-}
+@media screen and (min-width: 700px) {
+    .infosport {
+        font-size : 30px;
+    }
+  }
 
 

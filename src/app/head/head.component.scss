@@ -4,15 +4,15 @@
 
 .head{
     display:flex;
-    padding-bottom: 2em;
 }
 
 .titre{
     color: white;
     background-color: red;
-    width: 60vw;
-    height: 10vh;
+    width: 200px;
+    height: 22vh;
     padding-top: 13vh;
+    
 }
 .titre h1{
     text-align: right;
@@ -24,31 +24,21 @@ a{
     font-family: Arial, Helvetica, serif;
 }
 
-img{
-    width: 70%;
-    height: 50%;
-    text-align:center;
-}
-
-.connexion{
+.navigation{
     color:white;
-    width: 40vw;
     height: 10vh;
+    padding-left: 15vw;
     padding-top: 5vh;
-    padding-left: 3vw;
+    font-size: 20px; 
 }
 
-h1{
-    text-align: center;
-    color:white;
-}
-
-p{
-    color:white;
-    text-align: left;
-}
-
-.textesport p{
-    padding : 2em;
-
-}
+@media screen and (min-width: 700px) {
+    .navigation {
+      padding-top: 10vh;
+      display:flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      font-size : 25px;
+      
+    }
+  }

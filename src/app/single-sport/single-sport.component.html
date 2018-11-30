@@ -1,4 +1,17 @@
-<h2>{{ nomSport }}</h2>
-<h2>Règles du {{ nomSport }} : {{ reglesSport }}</h2>
+<div class="wrapp">
 
-<a routerLink="/sport">Retour aux sports</a>
+    <app-head></app-head>
+
+    <h1>{{sport.nomSport}}<br></h1>
+
+    <div class="textesport">
+        <img src="{{sport.urlImageSport}}" /><br><br>
+        <p>
+            {{sport.descriptionSport}}<br><br>
+            Saison : {{sport.saisonSport}}<br><br>
+            Règles du {{sport.nomSport}} : {{sport.reglesSport}}<br></p>
+    </div>
+
+    <a routerLink="/sport">Retour aux sports</a>
+
+</div>

@@ -1,10 +1,10 @@
 export class Sport {
-    idSport : BigInteger;
+    idSport : number;
     terrain : string;
     descriptionSport : string;
     nomSport : string;
     saisonSport : string;
     specificitesSport : string;
     urlImageSport : string;
-    commentaire : BigInteger;
+    commentaire : number;
 }
