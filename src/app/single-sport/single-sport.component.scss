@@ -28,6 +28,7 @@ img{
     width: 70%;
     height: 50%;
     text-align:center;
+    padding-top: 2em;
 }
 
 .connexion{
@@ -41,6 +42,12 @@ img{
 h1{
     text-align: center;
     color:white;
+    padding-top : 1em;
+    padding-bottom: 1em;
+}
+
+hr{
+    border : solid 0.5px grey;
 }
 
 p{

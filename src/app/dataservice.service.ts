@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './model/user';
 import { Sport } from './model/sport';
+import { Terrain} from './model/terrain';
+import { Equipement } from './model/equipement';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class DataserviceService {
 
   constructor(private httpClient: HttpClient) { }
   
-
+//Methode permettant de selectionner un sport parmi ma liste
  public getSportById(idSport : number) : Observable <Sport>{
  return this.httpClient.get<Sport>('http://localhost:8080/api/sport/'+idSport);
  }
@@ -23,6 +25,14 @@ export class DataserviceService {
 
   public findSport(): Observable <Sport[]>{
     return this.httpClient.get<Sport[]>('http://localhost:8080/api/sport/all');
+  }
+
+  public findTerrain(): Observable<Terrain[]>{
+    return this.httpClient.get<Terrain[]>("http://localhost:8080/api/terrain/all");
+  }
+
+  public findEquipement() : Observable <Equipement[]>{
+    return this.httpClient.get<Equipement[]>("http://localhost:8080/api/equipement/all");
   }
 
 }

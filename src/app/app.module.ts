@@ -15,16 +15,22 @@ import { AuthService } from './services/auth.service';
 import { SingleSportComponent } from './single-sport/single-sport.component';
 import { HeadComponent } from './head/head.component';
 import { CommentaireComponent } from './commentaire/commentaire.component';
+import { FooterComponent } from './footer/footer.component';
+import { TerrainListComponent } from './terrain-list/terrain-list.component';
+import { EquipementListComponent } from './equipement-list/equipement-list.component';
 
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
+  //toutes mes redisrections
   { path : 'sport', component : SportComponent},
   //le fragment id de l'url pourra etre exploité
   { path : 'sport/:id', component : SingleSportComponent},
   { path : 'user', component : UserListComponent},
   { path : 'accueil', component : AccueilComponent},
-  { path : 'auth', component : AuthComponent}
+  { path : 'auth', component : AuthComponent},
+  { path : 'terrain', component : TerrainListComponent},
+  { path : 'equipement', component : EquipementListComponent}
 ];
 
 @NgModule({
@@ -38,7 +44,10 @@ const appRoutes: Routes = [
     AuthComponent,
     SingleSportComponent,
     HeadComponent,
-    CommentaireComponent
+    CommentaireComponent,
+    FooterComponent,
+    TerrainListComponent,
+    EquipementListComponent
   ],
   imports: [
     BrowserModule,
