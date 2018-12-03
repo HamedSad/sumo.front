@@ -30,9 +30,10 @@ const appRoutes: Routes = [
   { path : 'accueil', component : AccueilComponent},
   { path : 'auth', component : AuthComponent},
   { path : 'terrain', component : TerrainListComponent},
-  { path : 'equipement', component : EquipementListComponent},
+  { path : 'equipements', component : EquipementListComponent},
   { path : 'commentaire', component : CommentaireListComponent},
-  { path : 'commentaire-add', component : CommentaireAddComponent}
+  { path : 'commentaire-add', component : CommentaireAddComponent},
+  { path : 'equipement', component : EquipementComponent }
 ];
 
 @NgModule({

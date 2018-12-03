@@ -2,26 +2,27 @@
 
   <app-head></app-head>
   <hr>
-  <h1>Liste des equipements</h1>
+  <h1>Liste des équipements</h1>
   <hr>
 
   <li *ngFor="let equipement of equipementList">
-   <p>{{equipement.nomEquipement1}}<br><br>
-    <img src="{{equipement.urlPhotoEquipement1}}"/>
-  
-  <p>{{equipement.nomEquipement2}}<br><br>
-    <img src="{{equipement.urlPhotoEquipement2}"/>
-  
-  <p>{{equipement.nomEquipement3}}<br><br>
-    <img src="{{equipement.urlPhotoEquipement3}}"/>
-  
-  <p>{{equipement.nomEquipement4}}<br><br>
-    <img src="{{equipement.urlPhotoEquipement4}}"/>
-  
-  <p>{{equipement.nomEquipement5}}<br><br>
-    <img src="{{equipement.urlPhotoEquipement5}}"/>
+    <p><img src="{{equipement.urlPhotoEquipement1}}" />
+      {{equipement.nomEquipement1}}</p>
 
-  </p>
+    <p><img src="{{equipement.urlPhotoEquipement2}}" />
+      {{equipement.nomEquipement2}}</p>
+
+
+    <p><img src="{{equipement.urlPhotoEquipement3}}" />
+      {{equipement.nomEquipement3}}</p>
+
+
+    <p><img src="{{equipement.urlPhotoEquipement4}}" />
+      {{equipement.nomEquipement4}}</p>
+
+    <p><img src="{{equipement.urlPhotoEquipement5}}" />
+      {{equipement.nomEquipement5}}</p>
+
     <hr>
 
   </li>
