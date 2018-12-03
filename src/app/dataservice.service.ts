@@ -41,7 +41,7 @@ export class DataserviceService {
   }
 
   public findEquipementById(id : number): Observable <Equipement>{
-    return this.httpClient.get<Equipement>('http://localhost:8080/api/sport/ + id + /equipement');
+    return this.httpClient.get<Equipement>('http://localhost:8080/api/sport/' + id + '/equipement');
   }
 
 

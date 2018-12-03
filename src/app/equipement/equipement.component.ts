@@ -23,6 +23,6 @@ this.getOneEquipement();
 getOneEquipement() {
 const idEquipement = +this.route.snapshot.paramMap.get("id");
  
-this.dataService.getSportById(idEquipement).subscribe(equipement => this.equipement = equipement);
+this.dataService.findEquipementById(idEquipement).subscribe(equipement => this.equipement = equipement);
 }
 }
