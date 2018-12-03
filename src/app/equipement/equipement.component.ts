@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from '../dataservice.service';
+import { ActivatedRoute } from '@angular/router';
+import { Equipement } from '../model/equipement';
 
 @Component({
   selector: 'app-equipement',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipementComponent implements OnInit {
 
-  constructor() { }
+  equipement: Equipement;
+   
 
-  ngOnInit() {
-  }
+  //pour récuperer le fragment id on injecte ActivatedRoute dans lequel il y aura toutes les infos de la route active et de ce fragment
+  constructor(private dataService: DataserviceService, private route: ActivatedRoute) {}
 
+ngOnInit() {
+this.getOneEquipement();
+}
+
+getOneEquipement() {
+const idEquipement = +this.route.snapshot.paramMap.get("id");
+ 
+this.dataService.getSportById(idEquipement).subscribe(equipement => this.equipement = equipement);
+}
 }

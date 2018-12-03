@@ -1,0 +1,56 @@
+.wrapp{
+    background-color: #343F4B ;
+}
+
+.head{
+    display:flex;
+    padding-bottom: 2em;
+}
+
+.titre{
+    color: white;
+    background-color: red;
+    width: 200px;
+    height: 22vh;
+    padding-top: 13vh;
+    
+}
+
+.connexion{
+    color: red;
+    width: 40vw;
+    height: 20vh;
+    padding-top: 5vh;
+    padding-left: 3vw;
+}
+
+.texteaccueil p{
+    color: white;
+    padding: 1em
+}
+
+#sumo{
+    color: red;
+}
+
+.formulaireaccueil{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.network{
+    padding-top : 4em;
+    padding-bottom : 4em;
+    width: 40vw;
+    margin: 0 auto;
+    justify-content: space-around;
+    display: flex;
+}
+
+.network img {
+    width: 10vw;
+}

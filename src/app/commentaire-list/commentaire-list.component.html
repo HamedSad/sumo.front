@@ -1,0 +1,13 @@
+<div class="comments">
+    <br>
+    <h3>Commentaires</h3>
+    <br>
+    <hr>
+    <br>
+
+    <li class="commentaires" *ngFor="let commentaire of commentaireList">
+        <p>Publié le {{commentaire.dateCommentaire}}</p>
+        <p>{{commentaire.texteCommentaire}}</p><br><br><br>
+
+    </li>
+</div>
