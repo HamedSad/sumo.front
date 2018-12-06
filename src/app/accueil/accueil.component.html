@@ -19,27 +19,77 @@
         <p><span id="sumo">#SUMO </span>vous permet de découvrir et partager de nouvelles expériences sportives</p>
     </div>
 
-    <!-- Formulaire -->
+    <!-- Formulaire
     <div class="formulaireaccueil">
-        <form>
+        <form >
+            (ngSubmit="onSubmit(f)" #f ="ngForm">
             <ul>
-                <li><input type="text" placeholder="Nom" required /></li><br>
-                <li><input type="text" placeholder="Prenom" required /></li><br>
-                <li><input type="text" placeholder="Email" required /></li><br>
-                <li><input type="password" placeholder="Mot de passe" required /></li><br>
-                <li><input type="password" placeholder="Confirmation" required /></li><br>
+                <li><input type="text" placeholder="Nom" required name="nomUser" ngModel /></li><br>
+                <li><input type="text" placeholder="Prenom" required name="prenomUser" ngModel /></li><br>
+                <li><input type="text" placeholder="Email" required name="emailUser" ngModel /></li><br>
+                <li><input type="password" placeholder="Mot de passe" required name="passwordUser" ngModel /></li><br>
+                <li><input type="password" placeholder="Confirmation" required name="passwordUser" ng Model /></li><br>
                 <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">S'inscrire</button>
             </ul>
         </form>
-    </div>
+    </div>-->
 
-    <!-- Footer de la page d'accueil-->
+    <div class="row custom-row">
+            <div class= "col-sm-5 custom-container jumbotron">
+                 
+              <form class="form-horizontal">
+                  <fieldset>
+                  <legend>Inscription</legend>
+                   
+                      <!--- Email Block --->
+                      <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="text"
+                          id="inputEmail"
+                          placeholder="Email">
+                      </div>
+                      <!--- Password Block --->
+                      <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password"
+                          id="inputPassword"
+                          placeholder="Password">
+                      </div>
+               
+                      <div class="form-group">
+                        <label for="confirmPassword" >Confirm Password</label>
+                        <input type="password"
+                          id="confirmPassword"
+                          placeholder="Password">
+                      </div>
+                       
+                      <!--- Select gender Block --->
+                      <div class="form-group">
+                        <label for="select">Gender</label>
+                          <select id="select">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                          </select>
+                      </div>
+                       
+                      <!--- Terms and conditions Block --->
+                       <div class="form-group checkbox">
+                        <label>
+                          <input type="checkbox"> Confirm that you've read the Terms and 
+                          Conditions
+                        </label>
+                      </div>
+                      
+                     <!--- Buttons Block --->
+                      <div class="form-group">
+                          <button type="reset" class="btn btn-default">Cancel</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </fieldset>
+              </form>
+            </div>
+          </div>
 
-    <div class="network">
-        <a href="http://www.facebook.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png"></a>
-        <a href="http://www.twitter.com"><img src="http://www.occhiodiavellino.it/wp-content/uploads/2018/05/Twitter.png"></a>
-        <a href="https://www.instagram.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2000px-Instagram_logo_2016.svg.png"></a>
-    </div>
+    
 
-
-</div>

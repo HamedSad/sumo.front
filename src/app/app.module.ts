@@ -20,6 +20,7 @@ import { EquipementListComponent } from './equipement-list/equipement-list.compo
 import { CommentaireListComponent } from './commentaire-list/commentaire-list.component';
 import { CommentaireAddComponent } from './commentaire-add/commentaire-add.component';
 import { SportsParTerrainComponent } from './sports-par-terrain/sports-par-terrain.component';
+import { FormsModule } from '@angular/forms';
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
 
   schemas:[
