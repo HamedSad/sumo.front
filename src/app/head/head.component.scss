@@ -1,9 +1,11 @@
 .wrapp{
     background-color: #343F4B ;
+    
 }
 
 .head{
     display:flex;
+    justify-content: space-between;
 }
 
 .titre{
@@ -29,7 +31,7 @@ a{
     height: 10vh;
     padding-left: 15vw;
     padding-top: 5vh;
-    font-size: 20px; 
+    font-size: 10px; 
 }
 
 @media screen and (min-width: 750px) {

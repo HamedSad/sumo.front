@@ -5,25 +5,42 @@
             <h1>#SUMO</h1>
         </div>
 
-        <!-- Partie connexion avec le bouton se connecter -->
-      <div class="navigation">
-        <div class="deconnexion">
-            <a routerLink="/accueil">&nbsp;Déconnexion&nbsp;</a>
-        </div>
-        <div class="equipements">
-            <a routerLink="/equipements">&nbsp;Equipements&nbsp;</a>
-        </div>
-        <div class="terrain">
-            <a routerLink="/terrain">&nbsp;Terrains&nbsp;</a>
-        </div>
-        <div class="accueil">
-          <a routerLink="/sport">&nbsp;Accueil&nbsp;</a>
-        </div>
+        <div class="navigation2">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+              
+            </a>
           
-      </div>
+            <button class="navbar-toggler" type="button"
+            (click)="toggleNavbar()">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+          
+            <div class="collapse navbar-collapse"
+            [ngClass]="{ 'show': navbarOpen }">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a routerLink="/sport" class="nav-link" href="#">Accueil</a>
+                </li>
+          
+                <li class="nav-item">
+                  <a routerLink="/equipements" class="nav-link" href="#">Equipements</a>
+                </li>
 
+                <li class="nav-item">
+                    <a routerLink="/terrain" class="nav-link" href="#">Terrains</a>
+                  </li>
 
-    </div>
+                  <li class="nav-item">
+                    <a routerLink="/accueil" class="nav-link" href="#">Déconnexion</a>
+                  </li>
 
+              </ul>
+            </div>
+          </nav>
+        </div>
+</div>
 
 </div>

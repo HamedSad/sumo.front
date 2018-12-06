@@ -6,7 +6,7 @@
     <br>
 
     <li class="commentaires" *ngFor="let commentaire of commentaireList">
-        <p>Publié le {{commentaire.dateCommentaire}}</p>
+        <p>Publié le {{commentaire.dateCommentaire | date : ' dd MMM y'}}</p>
         <p>{{commentaire.texteCommentaire}}</p><br><br><br>
 
     </li>

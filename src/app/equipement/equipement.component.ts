@@ -8,21 +8,20 @@ import { Equipement } from '../model/equipement';
   templateUrl: './equipement.component.html',
   styleUrls: ['./equipement.component.scss']
 })
+
 export class EquipementComponent implements OnInit {
 
-  equipement: Equipement;
-   
+  equipementSport: Equipement;
 
   //pour récuperer le fragment id on injecte ActivatedRoute dans lequel il y aura toutes les infos de la route active et de ce fragment
   constructor(private dataService: DataserviceService, private route: ActivatedRoute) {}
 
 ngOnInit() {
-this.getOneEquipement();
+this.getOneSport();
 }
 
-getOneEquipement() {
-const idEquipement = +this.route.snapshot.paramMap.get("id");
- 
-this.dataService.findEquipementById(idEquipement).subscribe(equipement => this.equipement = equipement);
-}
+getOneSport() {
+const idSport = +this.route.snapshot.paramMap.get("id");
+this.dataService.findEquipementBySport(idSport).subscribe(equipement => this.equipementSport = equipement);
+  }
 }
