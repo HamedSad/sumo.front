@@ -9,13 +9,13 @@ a{
     
 }
 
-
 h1{
     text-align: center;
     color:white;
     padding-top : 1em;
     padding-bottom: 1em;
 }
+
 hr{
    
     border : solid 0.5px grey;
@@ -50,6 +50,13 @@ img {
     }
   }
 
+  @media screen and (max-width: 650px) {
+    img {
+        width : 8.2em;
+        height : 8.2em;
+    }
+  }
+
 .sports{
     margin : 2em 0em 2em 1em;
     
@@ -71,7 +78,7 @@ img {
     padding-left: 0.5em;
     padding-top: 4em;
     color: white;
-   /* border: red solid; */
+    /*border: red solid;*/
     font-family: Arial, Helvetica, serif;
 }
 
@@ -85,6 +92,12 @@ img {
     .infosport {
         font-size : 30px;
         padding-top: 10em;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .infosport {
+        padding-top: 3.5em;
     }
   }
 

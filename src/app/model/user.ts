@@ -1,6 +1,9 @@
 export class User {
+	
 	nomUser: string;
 	prenomUser: string;
 	emailUser: string;
-	idUser: BigInteger;
+	passwordUser: string;
+	passwordUser2: string;
+	
 }

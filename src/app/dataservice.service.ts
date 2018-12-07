@@ -62,9 +62,11 @@ export class DataserviceService {
     return this.httpClient.get<Sport[]>('http://localhost:8080/api/terrain/sport' + idTerrain);
   }
 
-  //Création de a méthode avec comme arguments name et date
-  //public addCommentaire(){
-   // this.httpClient.post('http://localhost:8080/api/commentaire.json', this.findCommentaire);
- // }
+ 
+
+    //Création de méthode pour ajouter un user
+    public addUser(user: User) : Observable<User> {
+      return this.httpClient.post<User>('http://localhost:8080/api/user', user);
+       }
 
 }

@@ -1,15 +1,12 @@
 <div class="wrapp">
+  <hr>
+  <h1>Equipement necessaire</h1>
+  <hr>
+  <ul>
+  <li *ngFor="let equipement of equipementSport">
+    <p><img src="{{equipement.urlPhotoEquipement}}" />
+      {{equipement.nomEquipement}}</p>
     <hr>
-    <h1>Equipement necessaire</h1>
-    <hr>
-  
-    <li *ngFor="let equipement of equipementSport">
-      <p><img src="{{equipement.urlPhotoEquipement}}" />
-        {{equipement.nomEquipement}}</p>
-  
-  
-      <hr>
-  
-    </li>
-  
-  </div>
+  </li>
+  </ul>
+</div>

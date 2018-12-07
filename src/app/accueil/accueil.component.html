@@ -21,8 +21,7 @@
 
     <!-- Formulaire
     <div class="formulaireaccueil">
-        <form >
-            (ngSubmit="onSubmit(f)" #f ="ngForm">
+        <form ngSubmit="onSubmit(f)" #f ="ngForm">
             <ul>
                 <li><input type="text" placeholder="Nom" required name="nomUser" ngModel /></li><br>
                 <li><input type="text" placeholder="Prenom" required name="prenomUser" ngModel /></li><br>
@@ -33,63 +32,75 @@
             </ul>
         </form>
     </div>-->
+    <div class="formulaire">
+        <div class="row custom-row">
+            <div class="col-sm-5 custom-container jumbotron">
 
-    <div class="row custom-row">
-            <div class= "col-sm-5 custom-container jumbotron">
-                 
-              <form class="form-horizontal">
-                  <fieldset>
-                  <legend>Inscription</legend>
-                   
-                      <!--- Email Block --->
-                      <div class="form-group">
-                        <label for="inputEmail">Email</label>
-                        <input type="text"
-                          id="inputEmail"
-                          placeholder="Email">
-                      </div>
-                      <!--- Password Block --->
-                      <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password"
-                          id="inputPassword"
-                          placeholder="Password">
-                      </div>
-               
-                      <div class="form-group">
-                        <label for="confirmPassword" >Confirm Password</label>
-                        <input type="password"
-                          id="confirmPassword"
-                          placeholder="Password">
-                      </div>
-                       
-                      <!--- Select gender Block --->
-                      <div class="form-group">
-                        <label for="select">Gender</label>
-                          <select id="select">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                          </select>
-                      </div>
-                       
-                      <!--- Terms and conditions Block --->
-                       <div class="form-group checkbox">
-                        <label>
-                          <input type="checkbox"> Confirm that you've read the Terms and 
-                          Conditions
-                        </label>
-                      </div>
-                      
-                     <!--- Buttons Block --->
-                      <div class="form-group">
-                          <button type="reset" class="btn btn-default">Cancel</button>
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-                  </fieldset>
-              </form>
+                <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <fieldset>
+                        <legend>Inscription</legend>
+
+                        <!---  Nom --->
+                        <div class="form-group">
+                            <label for="inputEmail"></label>
+                            <input type="text" id="Nom" placeholder="Nom" name="nomUser" ngModel required>
+                        </div>
+
+                        <!---  Prénom --->
+                        <div class="form-group">
+                            <label for="inputEmail"></label>
+                            <input type="text" id="Prenom" placeholder="Prénom" name="prenomUser" ngModel required>
+                        </div>
+
+
+                        <!--- Email --->
+                        <div class="form-group">
+                            <label for="inputEmail"></label>
+                            <input type="text" id="Email" placeholder="Email" name="emailUser" ngModel required>
+                        </div>
+
+                        <!--- Mot de passe --->
+                        <div class="form-group">
+                            <label for="inputPassword"></label>
+                            <input type="password" id="Password" placeholder="Mot de passe" name="passwordUser"
+                                ngModel required>
+                        </div>
+
+                        <!--- Confirmation --->
+                        <div class="form-group">
+                            <label for="inputPassword"></label>
+                            <input type="password" id="Password" placeholder="Confirmation" name="passwordUser2"
+                                ngModel required>
+                        </div>
+
+
+                        <!--- Genre 
+                        <div class="form-group">
+                            <label for="select">Genre</label>
+                            <select id="select">
+                                <option>Selectionner</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>-->
+
+                        <!--- Termes et conditions, checkbox 
+                        <div class="form-group checkbox">
+                            <label>
+                                <input type="checkbox" ngModel required> Je confirme accepter les termes et conditions
+                            </label>
+                        </div>-->
+
+                        <!--- Bouttons --->
+                        <div class="form-group">
+                            <button type="reset" class="btn btn-default">Supprimer</button>
+                            <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+
             </div>
-          </div>
-
-    
-
+        </div>
+    </div>
+</div>

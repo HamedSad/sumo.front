@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +20,7 @@ import { TerrainListComponent } from './terrain-list/terrain-list.component';
 import { EquipementListComponent } from './equipement-list/equipement-list.component';
 import { CommentaireListComponent } from './commentaire-list/commentaire-list.component';
 import { CommentaireAddComponent } from './commentaire-add/commentaire-add.component';
-import { SportsParTerrainComponent } from './sports-par-terrain/sports-par-terrain.component';
-import { FormsModule } from '@angular/forms';
+import { SportsParTerrainComponent } from './sports-par-terrain/sports-par-terrain.component'
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
