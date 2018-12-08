@@ -4,18 +4,10 @@ export class Sport {
     descriptionSport : string;
     nomSport : string;
     saisonSport : string;
-    specificitesSport : string;
+    reglesSport : string;
     urlImageSport : string;
+    equipements : number;
     commentaire : number;
     idEquipement : number;
-    nomEquipement1 : string;
-    urlPhotoEquipement1 : string;
-    nomEquipement2 : string;
-    urlPhotoEquipement2 : string;
-    nomEquipement3 : string;
-    urlPhotoEquipement3 : string;
-    nomEquipement4 : string;
-    urlPhotoEquipement4 : string;
-    nomEquipement5 : string;
-    urlPhotoEquipement5 : string;
+    nomEquipement : string;
 }

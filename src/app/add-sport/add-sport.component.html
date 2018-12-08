@@ -1,0 +1,34 @@
+<div class='wrapp'>
+<app-head></app-head>
+
+    <!-- Formulaire -->
+    <div class="formAddSport">
+        <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        
+            <ul>
+                <li><input type="text" placeholder="Nom du sport"  name="nomSport" ngModel required /></li><br>
+                <li><input type="text" placeholder="Description" name="descriptionSport" ngModel required/></li><br>
+                <li><input type="text" placeholder="Saison" name="saisonSport" ngModel required/></li><br>
+                <li><input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /></li><br>
+                <li><input type="text" placeholder="Url photo" name="urlImageSport" ngModel required/></li><br>
+
+                <div class="form-group">
+                    <label for="select">Equipement</label>
+                    <select id="select" name="equipements">
+                        <option>Selectionner</option>
+                        <option value="1">Casque</option>
+                        <option value="2">Batte</option>
+                        <option>Pas d'équipement</option>
+                    </select>
+                </div>-->
+
+                <!--- Bouttons --->
+                <div class="form-group">
+                    <button type="reset" class="btn btn-default">Supprimer</button>
+                    <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Valider</button>
+                </div>
+            </ul>
+        </form>
+    </div>
+
+</div>

@@ -62,11 +62,18 @@ export class DataserviceService {
     return this.httpClient.get<Sport[]>('http://localhost:8080/api/terrain/sport' + idTerrain);
   }
 
- 
+//Création de méthode pour ajouter un user
+  public addUser(user: User) : Observable<User> {
+    return this.httpClient.post<User>('http://localhost:8080/api/user', user);
+  }
 
-    //Création de méthode pour ajouter un user
-    public addUser(user: User) : Observable<User> {
-      return this.httpClient.post<User>('http://localhost:8080/api/user', user);
-       }
+//Création d'un nouveau sport
+  public addSport(sport : Sport) : Observable<Sport>{
+      return this.httpClient.post<Sport>('http://localhost:8080/api/sport/add-sport', sport);
+  }
 
+//Suppression d'un sport en fonction de son Id
+  public deleteSportById(idSport : number) : Observable <Sport>{
+    return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport)
+  }
 }

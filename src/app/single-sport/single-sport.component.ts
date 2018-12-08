@@ -3,6 +3,8 @@ import { DataserviceService } from '../dataservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Sport } from '../model/sport';
 import { SportComponent } from '../sport/sport.component';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -31,7 +33,9 @@ export class SingleSportComponent implements OnInit {
 getOneSport() {
   const idSport = +this.route.snapshot.paramMap.get("id");
    
-  this.dataService.getSportById(idSport).subscribe(sport => this.sport=sport);
-}
+  this.dataService.getSportById(idSport).subscribe(sport => this.sport = sport);
+  this.dataService.deleteSportById(idSport).subscribe(sport => this.sport = sport);
+  //this.router.navigate(['/sport']);
+  }
 
 }
