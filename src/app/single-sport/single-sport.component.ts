@@ -12,16 +12,15 @@ import { Router } from '@angular/router';
   selector: 'app-single-sport',
   templateUrl: './single-sport.component.html',
   styleUrls: ['./single-sport.component.scss'],
- 
 })
 
 @NgModule({
   declarations: [SportComponent]
 })
+
 export class SingleSportComponent implements OnInit {
 
   sport: Sport;
-   
 
   //pour récuperer le fragment id on injecte ActivatedRoute dans lequel il y aura toutes les infos de la route active et de ce fragment
   constructor(private dataService: DataserviceService, private route: ActivatedRoute) {}
@@ -32,10 +31,11 @@ export class SingleSportComponent implements OnInit {
 
 getOneSport() {
   const idSport = +this.route.snapshot.paramMap.get("id");
-   
   this.dataService.getSportById(idSport).subscribe(sport => this.sport = sport);
-  this.dataService.deleteSportById(idSport).subscribe(sport => this.sport = sport);
-  //this.router.navigate(['/sport']);
   }
 
+  onSubmit(){
+    const idSport = +this.route.snapshot.paramMap.get("id");
+    this.dataService.deleteSportById(idSport).subscribe(sport => this.sport = sport); 
+    }
 }

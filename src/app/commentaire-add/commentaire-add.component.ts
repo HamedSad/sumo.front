@@ -25,7 +25,6 @@ export class CommentaireAddComponent implements OnInit {
 
 getOneSport() {
   const idSport = +this.route.snapshot.paramMap.get("id");
-   
   this.dataService.getSportById(idSport).subscribe(sport => this.sport=sport);
 }
 

@@ -17,7 +17,6 @@ export class AddSportComponent implements OnInit {
 
 
   constructor(private dataService : DataserviceService, private router : Router) { 
-
   }
 
   onSubmit(form : NgForm){
@@ -28,13 +27,11 @@ export class AddSportComponent implements OnInit {
     this.sport.saisonSport = form.value['saisonSport'];
     this.sport.nomEquipement = form.value['nomEquipement'];
     this.dataService.addSport(this.sport).subscribe(sport => this.sportList.push(sport));
-    this.router.navigate(['/sport'])
+    this.router.navigate(['sport'])
   
     console.log(form.value)
   };
 
   ngOnInit() {
-    
   }
-
 }

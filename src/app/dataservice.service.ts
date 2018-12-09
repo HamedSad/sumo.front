@@ -6,6 +6,7 @@ import { Sport } from './model/sport';
 import { Terrain} from './model/terrain';
 import { Equipement } from './model/equipement';
 import { Commentaire } from './model/commentaire';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ import { Commentaire } from './model/commentaire';
 
 export class DataserviceService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
   
 //Obtenir un sport dans ma liste
  public getSportById(idSport : number) : Observable <Sport>{
@@ -69,11 +70,13 @@ export class DataserviceService {
 
 //Création d'un nouveau sport
   public addSport(sport : Sport) : Observable<Sport>{
+    this.router.navigate(['sport']);
       return this.httpClient.post<Sport>('http://localhost:8080/api/sport/add-sport', sport);
   }
 
 //Suppression d'un sport en fonction de son Id
   public deleteSportById(idSport : number) : Observable <Sport>{
+    this.router.navigate(['sport']);
     return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport)
   }
 }

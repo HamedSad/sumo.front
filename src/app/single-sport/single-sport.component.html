@@ -11,19 +11,13 @@
             Saison : {{sport.saisonSport}}<br><br>
             Règles du {{sport.nomSport}} : {{sport.reglesSport}}<br></p>
     </div>
-
-    
-    <form (ngSubmit)="onSubmit2(f)" #f="ngForm">
-            <a routerLink="/sport"><button type="submit"class="btn btn-primary">Supprimer</button></a>
+   
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <button type="submit"class="btn btn-primary">Supprimer</button>
     </form>
-
+    
     <app-equipement></app-equipement>
-
     <a routerLink="commentaire-add">Publier un commentaire</a>
-
     <app-commentaire-list></app-commentaire-list>
-
     <app-footer></app-footer>
-
-
 </div>
