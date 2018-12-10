@@ -27,7 +27,7 @@ export class AddSportComponent implements OnInit {
     this.sport.saisonSport = form.value['saisonSport'];
     this.sport.nomEquipement = form.value['nomEquipement'];
     this.dataService.addSport(this.sport).subscribe(sport => this.sportList.push(sport));
-    this.router.navigate(['sport'])
+    this.router.navigate(['validation'])
   
     console.log(form.value)
   };

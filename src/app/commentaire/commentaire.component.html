@@ -1,0 +1,15 @@
+<div class="wrapp">
+
+  <app-head></app-head>
+
+  <hr><h1>Liste des commentaires</h1><hr>
+
+  <li class='commentaires' *ngFor="let commentaire of commentaireList">
+
+    <p>Le {{commentaire.dateCommentaire | date : ' dd MMM y'}}<br>
+      {{commentaire.texteCommentaire}}</p>
+    <br>
+  </li>
+
+  <app-footer></app-footer>
+</div>

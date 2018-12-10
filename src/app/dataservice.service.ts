@@ -15,20 +15,26 @@ import { Router } from '@angular/router';
 export class DataserviceService {
 
   constructor(private httpClient: HttpClient, private router: Router) { }
-  
+
+//Obtenir la liste de tous les sports
+  public findSport(): Observable <Sport[]>{
+    return this.httpClient.get<Sport[]>('http://localhost:8080/api/sport/all');
+  }
+
+//Obtenir la liste des sports pratiqués sur un terrain
+public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
+  return this.httpClient.get<Sport[]>('http://localhost:8080/api/terrain/sport' + idTerrain);
+}
+
 //Obtenir un sport dans ma liste
  public getSportById(idSport : number) : Observable <Sport>{
  return this.httpClient.get<Sport>('http://localhost:8080/api/sport/'+idSport);
  }
 
+
  //Obtenir la liste de tous les users
   public findUsers(): Observable <User[]>{
     return this.httpClient.get<User[]>('http://localhost:8080/api/user/all');
-  }
-
-  //Obtenir la liste de tous les sports
-  public findSport(): Observable <Sport[]>{
-    return this.httpClient.get<Sport[]>('http://localhost:8080/api/sport/all');
   }
 
   //Obtenir la liste de tous les terrains
@@ -43,24 +49,17 @@ export class DataserviceService {
 
   //Obtenir tous les commentaires
   public findCommentaire() : Observable <Commentaire[]>{
-    return this.httpClient.get<Commentaire[]>('http://localhost:8080/api/commentaire/all');
+    return this.httpClient.get<Commentaire[]>('http://localhost:8080/api/all-comments');
   }
-
 
 //Obtenir tous les commentaires d'un sport
   public findCommentaireBySport(id : number) : Observable <Commentaire[]>{
     return this.httpClient.get<Commentaire[]>('http://localhost:8080/api/sport/commentaire/'+ id);
   }
 
-
 //Obtenir tous les équipements d'un sport
   public findEquipementBySport(id : number): Observable <Equipement>{
     return this.httpClient.get<Equipement>('http://localhost:8080/api/equipement/sport/' + id );
-  }
-
-//Obtenir la liste des sports pratiqués sur un terrain
-  public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
-    return this.httpClient.get<Sport[]>('http://localhost:8080/api/terrain/sport' + idTerrain);
   }
 
 //Création de méthode pour ajouter un user
@@ -70,13 +69,12 @@ export class DataserviceService {
 
 //Création d'un nouveau sport
   public addSport(sport : Sport) : Observable<Sport>{
-    this.router.navigate(['sport']);
       return this.httpClient.post<Sport>('http://localhost:8080/api/sport/add-sport', sport);
   }
 
 //Suppression d'un sport en fonction de son Id
   public deleteSportById(idSport : number) : Observable <Sport>{
-    this.router.navigate(['sport']);
+    this.router.navigate(['validation']);
     return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport)
   }
 }

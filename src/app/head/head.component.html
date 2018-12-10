@@ -1,48 +1,54 @@
 <div class="wrapp">
 
-    <div class="head">
-        <div class="titre">
-            <h1>#SUMO</h1>
+  <div class="head">
+    <div class="titre">
+      <h1>#SUMO</h1>
+    </div>
+
+    <div class="navigation2">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+
+        </a>
+
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+          <div class="test">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a routerLink="/sport" class="nav-link" href="#">Accueil</a>
+              </li>
+
+              <li class="nav-item">
+                <a routerLink="/equipements" class="nav-link" href="#">Equipements</a>
+              </li>
+
+              <li class="nav-item">
+                <a routerLink="/terrain" class="nav-link" href="#">Terrains</a>
+              </li>
+
+              <li class="nav-item">
+                <a routerLink="/accueil" class="nav-link" href="#">Déconnexion</a>
+              </li>
+
+              <li class="nav-item">
+                <a routerLink="/user" class="nav-link" href="#">Utilisateurs</a>
+              </li>
+
+              <li class="nav-item">
+                <a routerLink="/all-comments" class="nav-link" href="#">Commentaires</a>
+              </li>
+
+            </ul>
+          </div>
         </div>
-
-        <div class="navigation2">
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
-              
-            </a>
-          
-            <button class="navbar-toggler" type="button"
-            (click)="toggleNavbar()">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-          
-            <div class="collapse navbar-collapse"
-            [ngClass]="{ 'show': navbarOpen }">
-            <div class="test">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a routerLink="/sport" class="nav-link" href="#">Accueil</a>
-                </li>
-          
-                <li class="nav-item">
-                  <a routerLink="/equipements" class="nav-link" href="#">Equipements</a>
-                </li>
-
-                <li class="nav-item">
-                    <a routerLink="/terrain" class="nav-link" href="#">Terrains</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a routerLink="/accueil" class="nav-link" href="#">Déconnexion</a>
-                  </li>
-
-              </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-</div>
+      </nav>
+    </div>
+  </div>
 
 </div>

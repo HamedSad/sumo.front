@@ -2,17 +2,19 @@
 
   <app-head></app-head>
 
-<h1>Liste des utilisateurs</h1>
+  <hr><h1>Liste des utilisateurs</h1><hr>
 
-<li *ngFor = "let user of userList">
+  <li class="users" *ngFor="let user of userList">
 
-  Utilisateur numero : {{user.idUser}}<br>
+   <p> Utilisateur numero : {{user.idUser}}<br>
     Nom : {{user.nomUser}}
     <br>
     Prénom : {{user.prenomUser}}
     <br>
-   Email :  {{user.emailUser}}
-  <hr>
+    Email : {{user.emailUser}}</p>
+    
   </li>
 
-  </div>
+  <app-footer></app-footer>
+
+</div>

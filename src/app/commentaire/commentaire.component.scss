@@ -17,8 +17,18 @@ hr{
     border : solid 0.5px grey;
 }
 
-.users{
+h3{
+    color: red;
+    text-align: right;
+    padding-right : 20%;
+}
+
+.commentaires{
     text-align: left;
     margin-left : 20%;
     margin-right: 10%;
+}
+
+li{
+    list-style-type: none; 
 }
