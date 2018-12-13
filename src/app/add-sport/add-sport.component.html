@@ -1,18 +1,43 @@
 <div class='wrapp'>
-<app-head></app-head>
+    <app-head></app-head>
 
     <!-- Formulaire -->
     <div class="formAddSport">
         <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
-        
-            <ul>
-                <li><input type="text" placeholder="Nom du sport"  name="nomSport" ngModel required /></li><br>
-                <li><input type="text" placeholder="Description" name="descriptionSport" ngModel required/></li><br>
-                <li><input type="text" placeholder="Saison" name="saisonSport" ngModel required/></li><br>
-                <li><input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /></li><br>
-                <li><input type="text" placeholder="Url photo" name="urlImageSport" ngModel required/></li><br>
+            <fieldset>
+                <legend>Ajouter un sport</legend>
 
-                <li><div class="form-group">
+                <!---  Nom du sport --->
+                <div class="form-group">
+                    <label for="inputName"></label>
+                    <input type="text" placeholder="Nom du sport" name="nomSport" ngModel required /><br>
+                </div>
+
+                <!---  Description --->
+                <div class="form-group">
+                    <label for="inputDescription"></label>
+                    <input type="text" placeholder="Description" name="descriptionSport" ngModel required /><br>
+                </div>
+
+                <!---  Saison --->
+                <div class="form-group">
+                    <label for="inputSeason"></label>
+                    <input type="text" placeholder="Saison" name="saisonSport" ngModel required /><br>
+                </div>
+
+                <!---  Règles --->
+                <div class="form-group">
+                    <label for="inputRules"></label>
+                    <input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /><br>
+                </div>
+
+                <!---  Image --->
+                <div class="form-group">
+                    <label for="inputPicture"></label>
+                    <input type="text" placeholder="Url photo" name="urlImageSport" ngModel required /><br>
+                </div>
+
+                <div class="form-group">
                     <label for="select">Terrain</label><br>
                     <select id="select" name="terrain">
                         <option>Selectionner</option>
@@ -21,14 +46,16 @@
                         <option value="3">Piscine</option>
                         <option value="4">Gymnase</option>
                     </select>
-                </div></li>
+                </div>
+
 
                 <!--- Bouttons --->
                 <div class="form-group">
                     <button type="reset" class="btn btn-default">Supprimer</button>
                     <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Valider</button>
                 </div>
-            </ul>
+                
+            </fieldset>
         </form>
     </div>
 

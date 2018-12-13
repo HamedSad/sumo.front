@@ -4,9 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Sport } from '../model/sport';
 import { SportComponent } from '../sport/sport.component';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-
-
+import { CommentaireListComponent } from '../commentaire-list/commentaire-list.component';
 
 @Component({
   selector: 'app-single-sport',
@@ -15,7 +13,7 @@ import { Router } from '@angular/router';
 })
 
 @NgModule({
-  declarations: [SportComponent]
+  declarations: [SportComponent, CommentaireListComponent]
 })
 
 export class SingleSportComponent implements OnInit {

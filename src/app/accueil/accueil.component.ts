@@ -3,7 +3,6 @@ import { NgForm } from '@angular/forms';
 import { DataserviceService } from '../dataservice.service';
 import { Router } from '@angular/router';
 import { User } from '../model/user';
-import { UserListComponent } from '../user-list/user-list.component';
 
 @Component({
   selector: 'app-accueil',
@@ -16,7 +15,6 @@ export class AccueilComponent implements OnInit {
   userList : User[];
 
   constructor(private dataService : DataserviceService, private router : Router) { 
-    
   }
 
   onSubmit(form : NgForm){

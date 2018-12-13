@@ -61,6 +61,11 @@ public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
   public findEquipementBySport(id : number): Observable <Equipement>{
     return this.httpClient.get<Equipement>('http://localhost:8080/api/equipement/sport/' + id );
   }
+//Sauvegarde d'un commentaire en fonction d'un sport
+  public saveCommentBySport(idSport : number, commentaire : Commentaire): Observable <Commentaire>{
+    this.router.navigate(['validation']);
+    return this.httpClient.post<Commentaire>('http://localhost:8080/api/sport/add-comment/' + idSport, commentaire);
+  }
 
 //Création de méthode pour ajouter un user
   public addUser(user: User) : Observable<User> {

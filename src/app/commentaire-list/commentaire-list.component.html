@@ -1,13 +1,27 @@
 <div class="comments">
-    <br>
-    <h3>Commentaires</h3>
-    <br>
-    <hr>
-    <br>
+  <br>
 
-    <li class="commentaires" *ngFor="let commentaire of commentaireList">
-        <p>Publié le {{commentaire.dateCommentaire | date : ' dd MMM y'}}</p>
-        <p>{{commentaire.texteCommentaire}}</p><br><br><br>
+  <!---  Commentaire --->
+  <div class="formulaire">
+    <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <fieldset>
+            <legend><p>Publier un commentaire</p></legend>
+            <div class="form-group">
+                <label for="textComment"></label>
+                <input type="text" id="texteCommentaire" placeholder="Votre commentaire" name="texteCommentaire" ngModel required><br>
+                <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Publier</button>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+  <h3>Commentaires</h3>
+  <br>
+  <hr>
+  <br>
 
-    </li>
+  <li class="commentaires" *ngFor="let commentaire of commentaireList">
+      <p>Publié le {{commentaire.dateCommentaire | date : ' dd MMM y'}}</p>
+      <p>{{commentaire.texteCommentaire}}</p><br><br><br>
+
+  </li>
 </div>

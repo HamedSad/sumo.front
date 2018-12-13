@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ActiviteComponent } from './activite/activite.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { SportComponent } from './sport/sport.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,7 +19,6 @@ import { TerrainListComponent } from './terrain-list/terrain-list.component';
 import { EquipementListComponent } from './equipement-list/equipement-list.component';
 import { CommentaireListComponent } from './commentaire-list/commentaire-list.component';
 import { CommentaireAddComponent } from './commentaire-add/commentaire-add.component';
-import { SportsParTerrainComponent } from './sports-par-terrain/sports-par-terrain.component';
 import { AddSportComponent } from './add-sport/add-sport.component';
 import { ValidationComponent } from './validation/validation.component';
 import { CommentaireComponent } from './commentaire/commentaire.component'
@@ -39,7 +37,6 @@ const appRoutes: Routes = [
   { path : 'commentaire', component : CommentaireListComponent},
   { path : 'commentaire-add', component : CommentaireAddComponent},
   { path : 'equipement', component : EquipementComponent },
-  { path : 'sport-par-terrain', component : SportsParTerrainComponent},
   { path : 'add-sport', component : AddSportComponent },
   { path : 'validation', component : ValidationComponent },
   { path : 'all-comments', component : CommentaireComponent}
@@ -48,7 +45,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ActiviteComponent,
     UserListComponent,
     SportComponent,
     AccueilComponent,
@@ -62,7 +58,6 @@ const appRoutes: Routes = [
     EquipementListComponent,
     CommentaireListComponent,
     CommentaireAddComponent,
-    SportsParTerrainComponent,
     AddSportComponent,
     ValidationComponent,
     CommentaireComponent

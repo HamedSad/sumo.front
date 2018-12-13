@@ -6,8 +6,14 @@ export class Sport {
     saisonSport : string;
     reglesSport : string;
     urlImageSport : string;
+    
     equipements : number;
     commentaire : number;
     idEquipement : number;
     nomEquipement : string;
+    idCommentaire : number;
+    texteCommentaire : string;
+    dateCommentaire : Date;
+
+    urlPhotoEquipement : string;
 }
