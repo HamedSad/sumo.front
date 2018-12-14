@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label for="textComment"></label>
                 <input type="text" id="texteCommentaire" placeholder="Votre commentaire" name="texteCommentaire" ngModel required><br>
-                <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Publier</button>
+                <button type="submit" [disabled]="f.invalid" class="btn btn-danger">Publier</button>
             </div>
         </fieldset>
     </form>
@@ -20,8 +20,12 @@
   <br>
 
   <li class="commentaires" *ngFor="let commentaire of commentaireList">
-      <p>Publié le {{commentaire.dateCommentaire | date : ' dd MMM y'}}</p>
-      <p>{{commentaire.texteCommentaire}}</p><br><br><br>
-
+      <!--<p>Publié le {{commentaire.dateCommentaire | date : ' dd MMM y'}}</p>-->
+      <p>{{commentaire.texteCommentaire}}</p>
+      <a href="commentaire/{{commentaire.idCommentaire}}" type="button">Supprimer</a>
+      <br><br><br>
+      <hr>
   </li>
 </div>
+
+<!--<button type="submit" class="btn btn-primary">Supprimer</button>-->

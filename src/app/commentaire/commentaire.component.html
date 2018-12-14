@@ -2,13 +2,18 @@
 
   <app-head></app-head>
 
-  <hr><h1>Liste des commentaires</h1><hr>
+  <hr>
+  <h1>Liste des commentaires</h1>
+  <hr>
 
   <li class='commentaires' *ngFor="let commentaire of commentaireList">
 
-    <p>Le {{commentaire.dateCommentaire | date : ' dd MMM y'}}<br>
-      {{commentaire.texteCommentaire}}</p>
+    <!-- <p>Le {{commentaire.dateCommentaire | date : ' dd MMM y'}}-->
     <br>
+    <p>{{commentaire.texteCommentaire}}</p>
+
+    <a href="commentaire/{{commentaire.idCommentaire}}">Supprimer</a>
+    <hr>
   </li>
 
   <app-footer></app-footer>

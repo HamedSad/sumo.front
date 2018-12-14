@@ -21,11 +21,12 @@ import { CommentaireListComponent } from './commentaire-list/commentaire-list.co
 import { CommentaireAddComponent } from './commentaire-add/commentaire-add.component';
 import { AddSportComponent } from './add-sport/add-sport.component';
 import { ValidationComponent } from './validation/validation.component';
-import { CommentaireComponent } from './commentaire/commentaire.component'
+import { CommentaireComponent } from './commentaire/commentaire.component';
+import { CommentaireSupprComponent } from './commentaire-suppr/commentaire-suppr.component'
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
-  //toutes mes redisrections
+  //toutes mes redirections
   { path : 'sport', component : SportComponent},
   //le fragment id de l'url pourra etre exploité
   { path : 'sport/:id', component : SingleSportComponent},
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
   { path : 'equipement', component : EquipementComponent },
   { path : 'add-sport', component : AddSportComponent },
   { path : 'validation', component : ValidationComponent },
-  { path : 'all-comments', component : CommentaireComponent}
+  { path : 'all-comments', component : CommentaireComponent},
+  { path : 'commentaire/:id', component : CommentaireSupprComponent}
 ];
 
 @NgModule({
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     CommentaireAddComponent,
     AddSportComponent,
     ValidationComponent,
-    CommentaireComponent
+    CommentaireComponent,
+    CommentaireSupprComponent
   ],
   imports: [
     BrowserModule,

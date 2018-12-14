@@ -3,7 +3,6 @@ import { DataserviceService } from '../dataservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Sport } from '../model/sport';
 import { SportComponent } from '../sport/sport.component';
-import { NgForm } from '@angular/forms';
 import { CommentaireListComponent } from '../commentaire-list/commentaire-list.component';
 
 @Component({
@@ -21,19 +20,19 @@ export class SingleSportComponent implements OnInit {
   sport: Sport;
 
   //pour récuperer le fragment id on injecte ActivatedRoute dans lequel il y aura toutes les infos de la route active et de ce fragment
-  constructor(private dataService: DataserviceService, private route: ActivatedRoute) {}
+  constructor(private dataService: DataserviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  this.getOneSport();
+    this.getOneSport();
   }
 
-getOneSport() {
-  const idSport = +this.route.snapshot.paramMap.get("id");
-  this.dataService.getSportById(idSport).subscribe(sport => this.sport = sport);
-  }
-
-  onSubmit(){
+  getOneSport() {
     const idSport = +this.route.snapshot.paramMap.get("id");
-    this.dataService.deleteSportById(idSport).subscribe(sport => this.sport = sport); 
-    }
+    this.dataService.getSportById(idSport).subscribe(sport => this.sport = sport);
+  }
+
+  onSubmit() {
+    const idSport = +this.route.snapshot.paramMap.get("id");
+    this.dataService.deleteSportById(idSport).subscribe(sport => this.sport = sport);
+  }
 }

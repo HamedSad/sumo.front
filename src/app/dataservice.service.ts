@@ -52,6 +52,11 @@ public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
     return this.httpClient.get<Commentaire[]>('http://localhost:8080/api/all-comments');
   }
 
+  //Obtenir un commentaire en fonction de son Id
+  public findCommentaireById(idCommentaire : number) : Observable <Commentaire>{
+    return this.httpClient.get<Commentaire>('http://localhost:8080/api/commentaire/' + idCommentaire);
+  }
+
 //Obtenir tous les commentaires d'un sport
   public findCommentaireBySport(id : number) : Observable <Commentaire[]>{
     return this.httpClient.get<Commentaire[]>('http://localhost:8080/api/sport/commentaire/'+ id);
@@ -81,5 +86,11 @@ public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
   public deleteSportById(idSport : number) : Observable <Sport>{
     this.router.navigate(['validation']);
     return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport)
+  }
+
+ //Suppression d'un commentaire en fonction de son Id 
+  public deleteCommentById(idComment : number) : Observable <Commentaire>{
+    this.router.navigate(['validation']);
+    return this.httpClient.delete<Commentaire>('http://localhost:8080/api/commentaire/' + idComment)
   }
 }
