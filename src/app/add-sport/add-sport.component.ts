@@ -12,14 +12,14 @@ import { Router } from '@angular/router';
 
 export class AddSportComponent implements OnInit {
 
-  sport : Sport = <Sport>{nomSport: '', descriptionSport: '', urlImageSport: '',nomEquipement: '',saisonSport: '', reglesSport: ''};
-  sportList : Sport[];
+  sport: Sport = <Sport>{ nomSport: '', descriptionSport: '', urlImageSport: '', nomEquipement: '', saisonSport: '', reglesSport: '' };
+  sportList: Sport[];
 
 
-  constructor(private dataService : DataserviceService, private router : Router) { 
+  constructor(private dataService: DataserviceService, private router: Router) {
   }
 
-  onSubmit(form : NgForm){
+  onSubmit(form: NgForm) {
     this.sport.nomSport = form.value['nomSport'];
     this.sport.descriptionSport = form.value['descriptionSport'];
     this.sport.urlImageSport = form.value['urlImageSport'];
@@ -28,7 +28,7 @@ export class AddSportComponent implements OnInit {
     this.sport.nomEquipement = form.value['nomEquipement'];
     this.dataService.addSport(this.sport).subscribe(sport => this.sportList.push(sport));
     this.router.navigate(['validation'])
-  
+
     console.log(form.value)
   };
 

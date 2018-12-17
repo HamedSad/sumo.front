@@ -1,14 +1,15 @@
 <div class="comments">
   <br>
 
-  <!---  Commentaire --->
+  <!---  Formulaire des commentaires --->
   <div class="formulaire">
     <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
         <fieldset>
             <legend><p>Publier un commentaire</p></legend>
             <div class="form-group">
                 <label for="textComment"></label>
-                <input type="text" id="texteCommentaire" placeholder="Votre commentaire" name="texteCommentaire" ngModel required><br>
+                <textarea name="texteCommentaire" placeholder="Votre commentaire" cols="35" rows="8" ngModel required></textarea><br>
+               <!-- <input type="text" placeholder="Votre commentaire" name="texteCommentaire" ngModel required><br>-->
                 <button type="submit" [disabled]="f.invalid" class="btn btn-danger">Publier</button>
             </div>
         </fieldset>

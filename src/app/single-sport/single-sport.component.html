@@ -5,17 +5,19 @@
     <h1>{{sport.nomSport}}<br></h1>
     <hr>
     <div class="textesport">
+
         <img src="{{sport.urlImageSport}}" /><br><br>
         <p>
             {{sport.descriptionSport}}<br><br>
             Saison : {{sport.saisonSport}}<br><br>
             Règles du {{sport.nomSport}} : {{sport.reglesSport}}<br></p>
+
     </div>
-   
+
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <button type="submit"class="btn btn-danger">Supprimer</button>
+        <button type="submit" class="btn btn-danger">Supprimer</button>
     </form>
-    
+
     <app-equipement></app-equipement>
     <!--<a routerLink="commentaire-add">Publier un commentaire</a>-->
     <app-commentaire-list></app-commentaire-list>

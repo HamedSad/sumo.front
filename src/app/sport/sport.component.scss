@@ -36,19 +36,35 @@ img {
     height : 10em;
 }
 
-@media screen and (min-width: 700px) {
-    img {
-        width : 15em;
-        height : 15em;
-    }
-  }
+@media screen and (min-width: 700px){
+.sports .alignementsport:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px grey;
+}
+}
 
-  @media screen and (min-width: 1000px) {
-    img {
-        width : 25em;
-        height : 25em;
+@media screen and (max-width: 700px) {
+    .sport{
+        margin-top: 3em;
+        margin-right: 10vw;
+        margin-left: 10vw;
+        width : 80vw;
     }
-  }
+}
+
+//@media screen and (min-width: 700px) {
+    //img {
+      //  width : 15em;
+      //  height : 15em;
+  //  }
+ // }
+
+  //@media screen and (min-width: 1000px) {
+ //   img {
+ //       width : 25em;
+ //       height : 25em;
+ //   }
+ // }
 
   @media screen and (max-width: 650px) {
     img {
@@ -59,8 +75,14 @@ img {
 
 .sports{
     margin : 2em 0em 2em 1em;
-    
 }
+
+@media screen and (min-width: 700px) {
+    .sports {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
 
 @media screen and (min-width: 700px) {
     .alignementsport {
@@ -71,7 +93,7 @@ img {
 .alignementsport{
     display: flex;
     padding-top :0em;
-   /* border: blue solid; */
+   border: blue solid;
 }
 
 .infosport{
@@ -82,18 +104,18 @@ img {
     font-family: Arial, Helvetica, serif;
 }
 
-@media screen and (min-width: 700px) {
-    .infosport {
-        font-size : 30px;
-    }
-  }
+//@media screen and (min-width: 700px) {
+//    .infosport {
+ //       font-size : 30px;
+ //   }
+ // }
 
-  @media screen and (min-width: 1000px) {
-    .infosport {
-        font-size : 30px;
-        padding-top: 10em;
-    }
-  }
+  //@media screen and (min-width: 1000px) {
+   // .infosport {
+ //       font-size : 30px;
+  //      padding-top: 10em;
+ //   }
+ // }
 
   @media screen and (max-width: 650px) {
     .infosport {

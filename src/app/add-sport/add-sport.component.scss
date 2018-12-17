@@ -2,6 +2,21 @@
     background-color: #343A40 ;
 }
 
+p, h1 , a{
+    color : white;
+}
+
+h1{
+    text-align: center;
+    color:white;
+    padding-top : 1em;
+    padding-bottom: 1em;
+}
+
+hr{
+    border : solid 0.5px grey;
+}
+
 .formAddSport{
     padding-top: 4em;
     padding-bottom: 4em;
@@ -14,3 +29,4 @@ legend{
 li{
     list-style: none;
 }
+

@@ -11,22 +11,22 @@ import { User } from '../model/user';
 })
 export class AccueilComponent implements OnInit {
 
-  user : User  = <User>{nomUser: '', prenomUser: '',emailUser : '', passwordUser: '', passwordUser2 : ''};
-  userList : User[];
+  user: User = <User>{ nomUser: '', prenomUser: '', emailUser: '', passwordUser: '', passwordUser2: '' };
+  userList: User[];
 
-  constructor(private dataService : DataserviceService, private router : Router) { 
+  constructor(private dataService: DataserviceService, private router: Router) {
   }
 
-  onSubmit(form : NgForm){
+  onSubmit(form: NgForm) {
 
     this.user.nomUser = form.value['nomUser'];
     this.user.prenomUser = form.value['prenomUser'];
     this.user.emailUser = form.value['emailUser'];
     this.user.passwordUser = form.value['passwordUser'];
-    this.user.passwordUser2 = form.value['passwordUser2']; 
+    this.user.passwordUser2 = form.value['passwordUser2'];
     this.dataService.addUser(this.user).subscribe(user => this.userList.push(user));
     this.router.navigate(['/sport']);
-    
+
     console.log(form.value);
 
   }

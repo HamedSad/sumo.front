@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -27,21 +27,21 @@ import { CommentaireSupprComponent } from './commentaire-suppr/commentaire-suppr
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
   //toutes mes redirections
-  { path : 'sport', component : SportComponent},
+  { path: 'sport', component: SportComponent },
   //le fragment id de l'url pourra etre exploité
-  { path : 'sport/:id', component : SingleSportComponent},
-  { path : 'user', component : UserListComponent},
-  { path : 'accueil', component : AccueilComponent},
-  { path : 'auth', component : AuthComponent},
-  { path : 'terrain', component : TerrainListComponent},
-  { path : 'equipements', component : EquipementListComponent},
-  { path : 'commentaire', component : CommentaireListComponent},
-  { path : 'commentaire-add', component : CommentaireAddComponent},
-  { path : 'equipement', component : EquipementComponent },
-  { path : 'add-sport', component : AddSportComponent },
-  { path : 'validation', component : ValidationComponent },
-  { path : 'all-comments', component : CommentaireComponent},
-  { path : 'commentaire/:id', component : CommentaireSupprComponent}
+  { path: 'sport/:id', component: SingleSportComponent },
+  { path: 'user', component: UserListComponent },
+  { path: 'accueil', component: AccueilComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: 'terrain', component: TerrainListComponent },
+  { path: 'equipements', component: EquipementListComponent },
+  { path: 'commentaire', component: CommentaireListComponent },
+  { path: 'commentaire-add', component: CommentaireAddComponent },
+  { path: 'equipement', component: EquipementComponent },
+  { path: 'add-sport', component: AddSportComponent },
+  { path: 'validation', component: ValidationComponent },
+  { path: 'all-comments', component: CommentaireComponent },
+  { path: 'commentaire/:id', component: CommentaireSupprComponent }
 ];
 
 @NgModule({
@@ -73,9 +73,9 @@ const appRoutes: Routes = [
     FormsModule
   ],
 
-  schemas:[
+  schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
-        NO_ERRORS_SCHEMA
+    NO_ERRORS_SCHEMA
   ],
 
   providers: [

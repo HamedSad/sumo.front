@@ -1,11 +1,13 @@
 <div class='wrapp'>
     <app-head></app-head>
 
+    <hr>
+    <h1>Ajouter un sport</h1>
+    <hr>
     <!-- Formulaire -->
     <div class="formAddSport">
         <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
             <fieldset>
-                <legend>Ajouter un sport</legend>
 
                 <!---  Nom du sport --->
                 <div class="form-group">
@@ -28,7 +30,8 @@
                 <!---  Règles --->
                 <div class="form-group">
                     <label for="inputRules"></label>
-                    <input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /><br>
+                    <textarea name="reglesSport" placeholder="Règles du sport" cols="42" rows="10" ngModel required></textarea>
+                    <!--<input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /><br>-->
                 </div>
 
                 <!---  Image --->
@@ -37,6 +40,7 @@
                     <input type="text" placeholder="Url photo" name="urlImageSport" ngModel required /><br>
                 </div>
 
+                <!-- Terrain
                 <div class="form-group">
                     <label for="select">Terrain</label><br>
                     <select id="select" name="terrain">
@@ -46,15 +50,14 @@
                         <option value="3">Piscine</option>
                         <option value="4">Gymnase</option>
                     </select>
-                </div>
-
+                </div> -->
 
                 <!--- Bouttons --->
                 <div class="form-group">
                     <button type="reset" class="btn btn-default">Supprimer</button>
                     <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Valider</button>
                 </div>
-                
+
             </fieldset>
         </form>
     </div>
