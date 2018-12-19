@@ -10,7 +10,6 @@ import { SportComponent } from './sport/sport.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { EquipementComponent } from './equipement/equipement.component';
-import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './services/auth.service';
 import { SingleSportComponent } from './single-sport/single-sport.component';
 import { HeadComponent } from './head/head.component';
@@ -32,7 +31,6 @@ const appRoutes: Routes = [
   { path: 'sport/:id', component: SingleSportComponent },
   { path: 'user', component: UserListComponent },
   { path: 'accueil', component: AccueilComponent },
-  { path: 'auth', component: AuthComponent },
   { path: 'terrain', component: TerrainListComponent },
   { path: 'equipements', component: EquipementListComponent },
   { path: 'commentaire', component: CommentaireListComponent },
@@ -51,7 +49,6 @@ const appRoutes: Routes = [
     SportComponent,
     AccueilComponent,
     EquipementComponent,
-    AuthComponent,
     SingleSportComponent,
     HeadComponent,
     CommentaireListComponent,
