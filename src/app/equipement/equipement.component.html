@@ -2,11 +2,11 @@
   <hr>
   <h1>Equipement necessaire</h1>
   <hr>
-  <ul>
-  <li *ngFor="let equipement of equipementSport">
-    <p><img src="{{equipement.urlPhotoEquipement}}" />
-      {{equipement.nomEquipement}}</p>
-    <hr>
-  </li>
-  </ul>
+
+  <div class="equipement">
+  <h6 *ngFor="let equipement of equipementSport">
+    <img src="{{equipement.urlPhotoEquipement}}"/><br>
+      {{equipement.nomEquipement}}
+  </h6>
+  </div>
 </div>

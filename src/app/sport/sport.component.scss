@@ -16,7 +16,6 @@ h1{
 }
 
 hr{
-   
     border : solid 0.5px grey;
 }
 
@@ -24,11 +23,11 @@ h6{
     text-align: left;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
     h6 {
-        font-size : 13px;  
+        font-size : 12px;  
     }
-  }
+}
 
 img {
     width : 10em;
@@ -49,12 +48,6 @@ img {
     }
 }
 
-.sport{
-    margin-top: 2em;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 @media screen and (min-width: 720px) {
     .sports {
         display: flex;
@@ -67,6 +60,8 @@ img {
 .alignementsport{
     display: flex;
     margin-left: 2em;
+    border-bottom: solid grey;
+    padding-bottom: 1em;
 }
 
 @media screen and (min-width: 720px){
@@ -75,6 +70,7 @@ img {
         margin-right : 1em;
         margin-left : 1em;
         width : 20em;
+        padding-bottom: 0em;
         border : solid grey;
     }
 }

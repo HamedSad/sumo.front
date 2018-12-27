@@ -1,0 +1,58 @@
+<div class='wrapp'>
+    <app-head></app-head>
+
+    <hr>
+    <div class="textesport">
+        <img src="{{sport.urlImageSport}}" /><br><br>
+    </div>
+
+
+    <hr>
+    <h1>Modifications</h1>
+    <hr>
+    <!-- Formulaire -->
+    <div class="formAddSport">
+        <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <fieldset>
+
+                <!---  Nom du sport --->
+                <div class="form-group">
+                    <label for="inputName"></label>
+                    <input type="text" placeholder="{{sport.nomSport}}" name="nomSport"/><br>
+                </div>
+
+                <!---  Description --->
+                <div class="form-group">
+                    <label for="inputDescription"></label>
+                    <input type="text" placeholder="{{sport.descriptionSport}}" name="descriptionSport"/><br>
+                </div>
+
+                <!---  Saison --->
+                <div class="form-group">
+                    <label for="inputSeason"></label>
+                    <input type="text" placeholder="{{sport.saisonSport}}" name="saisonSport"/><br>
+                </div>
+
+                <!---  Règles --->
+                <div class="form-group">
+                    <label for="inputRules"></label>
+                    <textarea name="reglesSport" placeholder="{{sport.reglesSport}}" cols="42" rows="10"></textarea>
+                    <!--<input type="text" placeholder="Règles du sport" name="reglesSport" ngModel required /><br>-->
+                </div>
+
+                <!---  Image --->
+                <div class="form-group">
+                    <label for="inputPicture"></label>
+                    <input type="text" placeholder="Url photo" name="urlImageSport"/><br>
+                </div>
+
+                <!--- Boutons --->
+                <div class="form-group">
+                    <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Valider les modifications</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</div>

@@ -85,7 +85,7 @@ public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
 //Suppression d'un sport en fonction de son Id
   public deleteSportById(idSport : number) : Observable <Sport>{
     this.router.navigate(['validation']);
-    return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport)
+    return this.httpClient.delete<Sport>('http://localhost:8080/api/sport/' + idSport + '/sport-suppr')
   }
 
  //Suppression d'un commentaire en fonction de son Id 
@@ -93,4 +93,10 @@ public findSportsByTerrain(idTerrain : number): Observable<Sport[]>{
     this.router.navigate(['validation']);
     return this.httpClient.delete<Commentaire>('http://localhost:8080/api/commentaire/' + idComment)
   }
+
+ //Modifier un sport
+ public updateSport(idSport : number, sport : Sport) : Observable <Sport>{
+   this.router.navigate(['validation']);
+   return this.httpClient.put<Sport>('http://localhost:8080/api/' + idSport + '/single-change', sport);
+ } 
 }

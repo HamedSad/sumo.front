@@ -21,7 +21,9 @@ import { CommentaireAddComponent } from './commentaire-add/commentaire-add.compo
 import { AddSportComponent } from './add-sport/add-sport.component';
 import { ValidationComponent } from './validation/validation.component';
 import { CommentaireComponent } from './commentaire/commentaire.component';
-import { CommentaireSupprComponent } from './commentaire-suppr/commentaire-suppr.component'
+import { CommentaireSupprComponent } from './commentaire-suppr/commentaire-suppr.component';
+import { SingleChangeComponent } from './single-change/single-change.component';
+import { SportSupprComponent } from './sport-suppr/sport-suppr.component'
 
 //Création d'une constante appRoutes qui sera de type route
 const appRoutes: Routes = [
@@ -39,7 +41,9 @@ const appRoutes: Routes = [
   { path: 'add-sport', component: AddSportComponent },
   { path: 'validation', component: ValidationComponent },
   { path: 'all-comments', component: CommentaireComponent },
-  { path: 'commentaire/:id', component: CommentaireSupprComponent }
+  { path: 'commentaire/:id', component: CommentaireSupprComponent },
+  { path: 'sport/:id/single-change', component: SingleChangeComponent},
+  { path: 'sport/:id/sport-suppr', component: SportSupprComponent}
 ];
 
 @NgModule({
@@ -60,7 +64,9 @@ const appRoutes: Routes = [
     AddSportComponent,
     ValidationComponent,
     CommentaireComponent,
-    CommentaireSupprComponent
+    CommentaireSupprComponent,
+    SingleChangeComponent,
+    SportSupprComponent
   ],
   imports: [
     BrowserModule,

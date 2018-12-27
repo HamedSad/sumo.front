@@ -15,7 +15,9 @@
     </div>
 
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <button type="submit" class="btn btn-danger">Supprimer</button>
+        <!--<button type="submit" class="btn btn-danger">Supprimer</button>-->
+        <a href="sport/{{sport.idSport}}/sport-suppr" type="button">Supprimer</a>
+        <a href="sport/{{sport.idSport}}/single-change" button type="submit" class="btn btn-danger">Modifier</a>
     </form>
 
     <app-equipement></app-equipement>

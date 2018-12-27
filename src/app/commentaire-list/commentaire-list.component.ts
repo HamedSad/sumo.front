@@ -34,6 +34,5 @@ onSubmit(form : NgForm){
   this.commentaire.texteCommentaire = form.value['texteCommentaire'];
   this.dataService.saveCommentBySport(idSport, this.commentaire).subscribe(commentaire => this.commentaireList.push(commentaire));
   console.log(form.value);
-
   }
 }

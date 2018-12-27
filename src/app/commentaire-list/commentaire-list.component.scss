@@ -6,6 +6,12 @@ p, h1 , a{
     color : white;
 }
 
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 12px;
+    }
+}
+
 .comments{
     margin-top: 5em;
 }

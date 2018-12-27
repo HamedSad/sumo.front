@@ -2,11 +2,21 @@ h1{
     color: white;
     margin-bottom: 1em;
 }
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 15px;
+    }
+}
 
-
-li{
-    list-style-type: none;
+h6{
     color: white;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    h6 {
+        font-size: 12px;
+    }
 }
 
 img {
@@ -15,23 +25,9 @@ img {
     margin-top : 3em;
 }
 
-@media screen and (max-width: 500px) {
-    img{
-        width : 8em;
-        height : 8em; 
-        }            
-    }
-
-@media screen and (min-width: 500px) {
-    img{
-        width : 15em;
-        height : 15em; 
-        }            
-    }
-
-@media screen and (min-width: 700px) {
-    img{
-        width : 20em;
-        height : 20em; 
-        }            
-    }
+.equipement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 1em;
+}

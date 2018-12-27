@@ -1,0 +1,16 @@
+<div class="wrapp">
+
+    <app-head></app-head>
+    <hr>
+    <br>
+    <p>Vous souhaitez supprimer le sport suivant : </p><br>
+    <p>{{sport.nomSport}}</p>
+    <br>
+  
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <button type="submit" class="btn btn-danger">Supprimer</button>
+    </form>
+  <br>
+    <app-footer></app-footer>
+  
+  </div>
